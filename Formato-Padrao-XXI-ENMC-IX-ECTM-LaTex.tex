@@ -177,9 +177,10 @@ as funções $F := (a := a+1) \rightarrow$ \verb|incrementa_a| e $G := (b := b-1
 \end{figure}
 
 \noindent
-Para um valor inicial de memória $(5,2)$, a computação deste programa se dá
+Para um valor inicial de memória \verb|(5,2)|, a computação deste programa se dá
 através dos seguintes passos:
 
+\begin{figure}[H]
 \begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7}]
     (1,(5,3)) $\rightarrow$ instrução inicial e valor inicial armazenado
     (2,(6,2)) $\rightarrow$ em 1 $a$ é incrementado
@@ -191,6 +192,8 @@ através dos seguintes passos:
     (4,(7,0)) $\rightarrow$ em 3 $b$ é decrementado
     (5,(7,0)) $\rightarrow$ em 4 como $b = 0$, desviou para 5. FIM.
 \end{Verbatim}
+\caption{Execução do programa monolítico para a entrada \texttt{(5,2)}}
+\end{figure}
 
 
 \subsubsection{Programa Iterativo}
@@ -226,7 +229,75 @@ mesmos:
 \subsubsection{Exemplo de Programa Iterativo}
 ~ % keep title in-place
 
+\begin{figure}[H]
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7}]
+    se T1 então (enquanto T2 faça (até T3 faça (V;W))) senão \checkmark
+\end{Verbatim}
+\caption{Exemplo de programa iterativo}
+\end{figure}
 
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{img/iterativo_ex}
+    \caption{Exemplo de programa iterativo em forma de fluxograma}
+\end{figure}
+
+Para efeito de exemplo, considerando uma máquina de dois registradores, $(a,b)$,
+as funções $V := (a := a-1) \rightarrow$ \verb|decrementa_a| e $W := (b := b+1)
+\rightarrow$ \verb|incrementa_b|, os testes $T_1 := (a == 10)$, $T_2 := (a >
+b)$, $T_3 := (b == 10)$ temos a seguinte máquina:
+
+\begin{figure}[H]
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7}]
+    se (a == 10) então (
+        enquanto (a > b) faça (
+            até (b == 10) faça (
+                decrementa_a;incrementa_b
+            )
+        )
+    ) senão \checkmark
+\end{Verbatim}
+\caption{Exemplo de programa iterativo com funções e testes especificados}
+\end{figure}
+
+\noindent
+Para um valor inicial de memória \verb|(10,2)|, a computação deste programa se
+dá através dos seguintes passos:
+
+\begin{figure}[H]
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7}]
+    MEMÓRIA | INSTRUÇÃO
+    (10, 2) | se (a == 10) então    $\rightarrow$ 10 == 10 $\rightarrow$ verdadeiro
+    (10, 2) | enquanto (a > b) faça $\rightarrow$ 10  >  2 $\rightarrow$ verdadeiro
+    (10, 2) | até (b == 10) faça    $\rightarrow$  2 == 10 $\rightarrow$ falso
+    (10, 2) | decrementa_a
+    ( 9, 2) | incrementa_b
+    ( 9, 3) | até (b == 10) faça    $\rightarrow$  3 == 10 $\rightarrow$ falso
+    ( 9, 3) | decrementa_a
+    ( 8, 3) | incrementa_b
+    ( 8, 4) | até (b == 10) faça    $\rightarrow$  4 == 10 $\rightarrow$ falso
+    ( 8, 4) | decrementa_a
+    ( 7, 4) | incrementa_b
+    ( 7, 5) | até (b == 10) faça    $\rightarrow$  5 == 10 $\rightarrow$ falso
+    ( 7, 5) | decrementa_a
+    ( 6, 5) | incrementa_b
+    ( 6, 6) | até (b == 10) faça    $\rightarrow$  6 == 10 $\rightarrow$ falso
+    ( 6, 6) | decrementa_a
+    ( 5, 6) | incrementa_b
+    ( 5, 7) | até (b == 10) faça    $\rightarrow$  7 == 10 $\rightarrow$ falso
+    ( 5, 7) | decrementa_a
+    ( 4, 7) | incrementa_b
+    ( 4, 8) | até (b == 10) faça    $\rightarrow$  8 == 10 $\rightarrow$ falso
+    ( 4, 8) | decrementa_a
+    ( 3, 8) | incrementa_b
+    ( 3, 9) | até (b == 10) faça    $\rightarrow$  9 == 10 $\rightarrow$ falso
+    ( 3, 9) | decrementa_a
+    ( 2, 9) | incrementa_b
+    ( 2,10) | até (b == 10) faça    $\rightarrow$ 10 == 10 $\rightarrow$ verdadeiro
+    ( 2,10) | enquanto (a > b)      $\rightarrow$  2  > 10 $\rightarrow$ falso
+    ( 2,10) | \checkmark FIM
+\end{Verbatim}
+\caption{Execução do programa iterativo para a entrada \texttt{(10,2)}}
+\end{figure}
 
 \subsubsection{Programa Recursivo}
 Também encontrado na maior parte das linguagens de programação atuais, é um
@@ -265,7 +336,74 @@ Para cada $E_k, k \in \{1, 2, \dots, n\}$, temos:
     \item $E_k$: Expressão que define a sub-rotina $R_k$;
 \end{itemize}
 
-<INSERIR EXEMPLOS AQUI>
+\subsubsection{Exemplo de Programa Recursivo}
+~ % keep title in-place
+
+\begin{figure}[H]
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7}]
+    R def (se T1 então G senão S;R),
+    S def H;I
+\end{Verbatim}
+\caption{Exemplo de programa recursivo}
+\end{figure}
+
+Para efeito de exemplo, considerando uma máquina de dois registradores, $(a,b)$,
+as funções $G := (\checkmark)$, $H := (a := a-1) \rightarrow$
+\verb|decrementa_a| e $I := (b := b+1) \rightarrow$ \verb|incrementa_b|, os
+testes $T_1 := (a == 0)$, temos a seguinte máquina:
+
+\begin{figure}[H]
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7}]
+    R def (se (a == 0) então \checkmark senão S;R),
+    S def decrementa_a;incrementa_b
+\end{Verbatim}
+\caption{Exemplo de programa recursivo com funções e testes especificados}
+\end{figure}
+
+\noindent
+Para um valor inicial de memória \verb|(5,0)|, a computação deste programa se
+dá através dos seguintes passos:
+
+\begin{figure}[H]
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7}]
+    (R; \checkmark,5,0)
+
+    (se (a == 0) então \checkmark senão (S;R); \checkmark,5,0)
+    (S;R; \checkmark,5,0)
+    (decrementa_a;incrementa_b;R; \checkmark,5,0)
+    (incrementa_b;R; \checkmark,4,0)
+    (R; \checkmark,4,1)
+
+    (se (a == 0) então \checkmark senão (S;R); \checkmark,4,1)
+    (S;R; \checkmark,4,1)
+    (decrementa_a;incrementa_b;R; \checkmark,4,1)
+    (incrementa_b;R; \checkmark,3,1)
+    (R; \checkmark,3,2)
+
+    (se (a == 0) então \checkmark senão (S;R); \checkmark,3,2)
+    (S;R; \checkmark,3,2)
+    (decrementa_a;incrementa_b;R; \checkmark,3,2)
+    (incrementa_b;R; \checkmark,2,2)
+    (R; \checkmark,2,3)
+
+    (se (a == 0) então \checkmark senão (S;R); \checkmark,2,3)
+    (S;R; \checkmark,2,3)
+    (decrementa_a;incrementa_b;R; \checkmark,2,3)
+    (incrementa_b;R; \checkmark,1,3)
+    (R; \checkmark,1,4)
+
+    (se (a == 0) então \checkmark senão (S;R); \checkmark,1,4)
+    (S;R; \checkmark,1,4)
+    (decrementa_a;incrementa_b;R; \checkmark,1,4)
+    (incrementa_b;R; \checkmark,0,4)
+    (R; \checkmark,0,5)
+
+    (se (a == 0) então \checkmark senão (S;R); \checkmark,0,5)
+    (\checkmark; \checkmark,0,5)
+    (\checkmark,0,5)
+\end{Verbatim}
+\caption{Execução do programa recursivo para a entrada \texttt{(5,0)}}
+\end{figure}
 
 \subsection{Tradução de Fluxogramas para Programas Monolíticos e Recursivos}
 
