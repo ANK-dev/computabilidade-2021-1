@@ -1,8 +1,10 @@
 --- # Turing.py input data
 
 # Initial tape data
-# TAPE_DATA: !!str 'ggghhhhhhhhh' # 1st Language (gggh*)
-TAPE_DATA: !!str 'ggggghhhhhhg' # 2nd language (g*(hhh)+g)
+# TAPE_DATA: !!str 'ggghhhhhhhhh' # 1st Language - accepted (gggh*)
+# TAPE_DATA: !!str 'gghhhhhhhhh'  # 1st Language - rejected (gggh*)
+# TAPE_DATA: !!str 'ggggghhhhhhg' # 2nd language - accepted (g*(hhh)+g)
+TAPE_DATA: !!str 'ghhhhhg'      # 2nd language - rejected (g*(hhh)+g)
 
 
 # Turing Machine Settings
@@ -33,4 +35,4 @@ TM_MATRIX: !!seq [
 MAX_ITER: !!int 50
 
 # Debug mode (on or off)
-DEBUG: !!bool on
+DEBUG: !!bool off

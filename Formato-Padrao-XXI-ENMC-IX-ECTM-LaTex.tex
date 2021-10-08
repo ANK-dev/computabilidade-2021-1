@@ -554,7 +554,11 @@ entrada é um dicionário que contém a própria quíntupla, isto é, estado atu
 saída (\verb|symbol_printed|), direção (\verb|direction|) e o próximo estado
 (\verb|next_state|).
 
-<INSERIR FIGURA - LÓGICA DE FUNCIONAMENTO DA MÁQUINA DE TURING>
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{img/tm_logic}
+    \caption{Lógica de funcionamento da máquina de Turing}
+\end{figure}
 
 A essência do funcionamento da MT é apresentada na figura acima, onde, para um
 dado estado, dependendo do símbolo de \textit{input}, pode-se ter diferentes
@@ -576,7 +580,11 @@ pressuposto que o usuário decidiu iniciar a execução, o programa irá mostrar
 console uma representação visual da fita, os dados nela presentes, e do cabeçote
 de leitura e escrita.
 
-<INSERIR FIGURA - EXECUÇÃO DA MÁQUINA DE TURING>
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{img/tm_run}
+    \caption{Execução da máquina de Turing}
+\end{figure}
 
 Os seguintes elementos podem ser vistos nesta imagem:
 
@@ -614,12 +622,20 @@ Esta foi definida segundo a seguinte expressão regular: \verb|gggh*|.
 Isto é, a mesma gera um conjunto de palavras que começa com \verb|ggg| e então é
 seguindo de zero ou mais \verb|h|.
 
-<INSERIR FIGURA - RESULTADO POSITIVO OPERAÇÃO MÁQUINA DE TURING LINGUAGEM A>
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{img/tm_language_a_accepted}
+    \caption{Entrada aceita pela MT para a linguagem A}
+\end{figure}
 
 Como pode ser visto pela figura acima, a máquina aceita corretamente a entrada
 \verb|ggghhhhhhhhh|, a qual pertence à linguagem A.
 
-<INSERIR FIGURA - RESULTADO NEGATIVO OPERAÇÃO MÁQUINA DE TURING LINGUAGEM A>
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{img/tm_language_a_rejected}
+    \caption{Entrada rejeitada pela MT para a linguagem A}
+\end{figure}
 
 Já nesta outra figura, vemos que a entrada \verb|gghhhhhhhhh| não é aceita pela
 máquina, uma vez que a mesma não pertence à linguagem A.
@@ -630,12 +646,20 @@ Esta foi definida segundo a seguinte expressão regular:
 zero ou mais \verb|g|, o qual é necessariamente seguido por uma ou mais triplas
 \verb|hhh| e termina com um único \verb|g|.
 
-<INSERIR FIGURA - RESULTADO POSITIVO OPERAÇÃO MÁQUINA DE TURING LINGUAGEM B>
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{img/tm_language_b_accepted}
+    \caption{Entrada aceita pela MT para a linguagem B}
+\end{figure}
 
 Como pode ser visto pela figura acima, a máquina aceita corretamente a entrada
 \verb|ggggghhhhhhg|, a qual pertence à linguagem B.
 
-<INSERIR FIGURA - RESULTADO NEGATIVO OPERAÇÃO MÁQUINA DE TURING LINGUAGEM B>
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{img/tm_language_b_rejected}
+    \caption{Entrada rejeitada pela MT para a linguagem B}
+\end{figure}
 
 Já nesta outra figura, vemos que a entrada \verb|ghhhhhg| não é aceita pela
 máquina, uma vez que a mesma não pertence à linguagem B.
