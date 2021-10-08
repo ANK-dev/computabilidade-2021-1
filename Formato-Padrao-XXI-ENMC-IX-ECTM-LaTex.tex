@@ -5,6 +5,7 @@
 %\usepackage{fancyhdr}
 \usepackage{fancyhdr, graphicx}
 \usepackage{fancyvrb}
+\usepackage[os=win]{menukeys}       % Keyboard keys font (PC style)
 \usepackage{color}
 \usepackage{wallpaper}
 \usepackage{titlesec}   %% Define space between paragraph e section
@@ -63,9 +64,9 @@
 \thispagestyle{firspagetstyle}
 
 \begin{abstract}
-Este trabalho trata-se sobre a definição de programas monolíticos, iterativos e
-recursivos; além disso, trata sobre a implementação de máquinas Norma e de
-Turing.
+    Este trabalho trata-se sobre a definição de programas monolíticos,
+    iterativos e recursivos; além disso, trata sobre a implementação de máquinas
+    Norma e de Turing.
 \end{abstract}
 
 \keywords{\em{Programa Monolítico, Programa Iterativo, Programa Recursivo,
@@ -143,8 +144,7 @@ retângulo correspondente à operação pode ser omitido.
 \end{figure}
 
 \subsubsection{Exemplo de Programa Monolítico}
-~ % keep title in-place
-
+~
 \begin{figure}[H]
 \begin{verbatim}
     1: faça F vá_para 2
@@ -227,8 +227,7 @@ mesmos:
 \end{enumerate}
 
 \subsubsection{Exemplo de Programa Iterativo}
-~ % keep title in-place
-
+~
 \begin{figure}[H]
 \begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7}]
     se T1 então (enquanto T2 faça (até T3 faça (V;W))) senão \checkmark
@@ -337,8 +336,7 @@ Para cada $E_k, k \in \{1, 2, \dots, n\}$, temos:
 \end{itemize}
 
 \subsubsection{Exemplo de Programa Recursivo}
-~ % keep title in-place
-
+~
 \begin{figure}[H]
 \begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7}]
     R def (se T1 então G senão S;R),
@@ -405,247 +403,300 @@ dá através dos seguintes passos:
 \caption{Execução do programa recursivo para a entrada \texttt{(5,0)}}
 \end{figure}
 
+\newpage
 \subsection{Tradução de Fluxogramas para Programas Monolíticos e Recursivos}
 
-\subsubsection{a}
-Diagrama a
-
-\subsubsection{b}
-Diagrama b
-
-\subsubsection{c}
-Diagrama c
-
-\subsubsection{d}
-Diagrama d
-
-\subsection{Implementação de uma Máquina Norma}
-
-\subsection{Implementação de uma Máquina de Turing}
-
-\subsection{Uso das Máquinas de Turing}
-
-% \ \ \ \
-%\newpage %
-
-\subsection{Paper length} The full paper including figures and tables must have
-at least 5 pages, but is limited to 10 A4-size pages (21 cm x 29.7 cm). Please
-limit your paper by writing concisely, rather than by reducing figures or tables
-to a size at which symbols/labels become difficult to read.
-
-\subsection{Page format}
-Each A4-size page should be formatted with 2.5 cm margins on all sides, except
-at the top. This defines the printable area. Inside this area, the text must be
-arranged in a single column. Please do not print any border around the text and
-do not insert page numbers.
-
-The final paper should look like this document.
-
-\subsection{General text specifications}
-
-The paper must be typed using 12 pt Times New Roman throughout the text, as in
-the present document. This includes title, headings, and figure and table
-captions.
-
-\vspace{0.5cm} % Example spaces
-
-\textbf{\textit{Paper title.}} The title should be in boldface type, all
-capital letters and centered on the page and must not exceed three lines. It
-should be single spaced if longer than one line. Skip one line (12 pt) between
-the title and the first author.
-
-\vspace{0.5cm} % Example spaces
-
-\textbf{\textit{Author(s) and affiliation.}} Type authors names in boldface
-type, flush left, one per line, including first name, middle and last name,
-followed by the e-mail address (not boldfaced). After the name put in
-superscript the number, related to the affiliation. The authors names should be
-followed by the corresponding affiliation, which should be in regular type
-(neither boldfaced nor italicized). After presenting affiliations should skip
-two lines (24 pt) between the last affiliation and the abstract.
-
-\vspace{0.5cm} % Example spaces
-
-\textbf{\textit{Abstract and keywords.}} Type the heading
-\textbf{\textit{Abstract.}} in boldface italics, flush left, followed by a
-period. On the same line, type the abstract in italics, justified alignment.
-The abstract should be no longer than 200 words. Skip one line, then type the
-heading \textbf{\textit{Keywords:}} (don't forget the colon) in boldface
-italics, flush left and type 3 to 5 keywords, separated by commas, with only
-the first letter of each keyword capitalized. Skip two lines (24 pt) between
-the keywords and the body of text.
-
-\vspace{0.5cm} % Example spaces
-
-\textbf{\textit{Headings.}} Type a first-level head (section) in all capital
-letters, boldface type, flush left. Begin by typing the Arabic number followed
-by a period, then type the head title 0.75 cm (or 7 blank spaces) from the left
-margin. Leave one blank line above and one below this head.
-
-For a second-level head (subsection), capitalize only the first letter, using
-boldface type, flush left. Begin by typing the double number, then type the
-sub-head title 0.75 cm from the left margin. Leave one blank line above and one
-below this head.
-
-Do not number third-level heads (sub-subsection). Use boldface italics,
-capitalizing only the first letter and indenting 0.75 cm from the left margin.
-Follow it by a period and start the text immediately. Leave one blank line
-above this head.
-
-\vspace{0.5cm} % Example spaces
+\subsubsection{Diagrama (a)}
+~
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=7.5cm]{img/diagrama_a}
+\end{figure}
 %
-\textbf{\textit{Body of text.}} The text should be typed using single-spaced
-lines and justified alignment. Start each paragraph 0.75 cm from the left
-margin and allow no space between paragraphs.
-
-\subsection{Equations, symbols and units}
-Indent an equation 1 cm (or 10 spaces) from the left margin. Number it with an
-Arabic number enclosed in parentheses, placed flush right. Allow one blank line
-above and one below each equation. For example:
-\begin{equation}
-\vec{q}_{r}=-4\pi r^{2}k\frac{dT}{dr}
-\label{eq1}
-\end{equation}
-%%%here space
-
-When referring to an equation in the text write Eq. (1), except at the
-beginning of a sentence, where Equation (1) should be used.
-
-Symbols should be italicized throughout the text. Define all symbols as they
-appear in the text. A nomenclature section is not necessary.
-
-All data, including those shown in tables and figures, must be reported in SI
-units.
-
-\subsection{Figures and tables}
-Figures and tables should be inserted as close as possible to their mention in
-the text. Enclosed text and symbols must be clearly readable; avoid small
-symbols. Supply good quality pictures and illustrations.
-
-Figures and tables and their captions should be centered in the text. Place
-figure caption below the figure, leaving one blank line between them. Place
-table title above the table, also leaving one blank line between them. Leave
-one blank line between the table or figure and the adjacent text. Color figures
-can be used.
-
-Number figures and tables consecutively using Arabic numerals (e.g., Figure 1,
-Figure 2, Table 1, Table 2). Refer to them in the text as Table 1 and Fig. 1
-(except at the beginning of a sentence, where Figure 1 should be used).
-% TABLE EXAMPLE
-\begin{table}[H] % !htbp
-\caption{Input parameters}
-\vspace{12pt}
-\centering{}
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ccc|cc}        %
-%{0.8\textwidth}
-\hline
-Method LJ & Configuration && Method R2W & Configuration\tabularnewline
-\hline
-$k_1$ (W/mK)  & $[0,0; 0,1]$ && $k_1$ (W/mK) & $[0, 0; 0,1]$\tabularnewline
-\hline
-$k_2$ (W/mK) & $[0,0; 0,1]$ && $k_2$ (W/mK) & $[0, 0; 0,1]$\tabularnewline
-\hline
-$n$ & $1,0$ && $n$ & $1,0$\tabularnewline
-\hline
-\end{tabular*}
-\end{table}
-
-\begin{figure}[!htbp] %h or !htbp
-\vspace{-2pt}
-\begin{center}
-\includegraphics[height=6.7cm,width=9cm]{figura_1}%
-\caption{Gibbs free energy variations: simulated results.}
-\label{fig1}%
-\end{center}
+\begin{figure}[H]
+\begin{verbatim}
+    1: se T1 vá_para 2 senão vá_para 3
+    2: faça F vá_para 3
+    3: se T2 vá_para 4 senão vá_para 7
+    4: faça G vá_para 5
+    5: se T1 vá_para 7 senão vá_para 6
+    6: faça F vá_para 1
+\end{verbatim}
+\caption{Tradução do fluxograma (a) para um programa monolítico}
+\end{figure}
+%
+\begin{figure}[H]
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7}]
+    P é R1 onde
+        R1 def (se T1 então R2 senão R3),
+        R2 def (F;R3),
+        R3 def (se T2 então R4 senão R7),
+        R4 def (G;R5),
+        R5 def (se T1 então R7 senão R6),
+        R6 def (F;R1)
+        R7 def \checkmark
+\end{Verbatim}
+\caption{Tradução do fluxograma (a) para um programa recursivo}
 \end{figure}
 
-Label coordinates in plots and add the corresponding units. Similarly, label
-columns/rows in tables and add the units.
+\newpage
+\subsubsection{Diagrama (b)}
+~
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=7.5cm]{img/diagrama_b}
+\end{figure}
+%
+\begin{figure}[H]
+\begin{verbatim}
+    1: se T faça vá_para 2 senão vá_para 3
+    2: faça G vá_para 6
+    3: faça F vá_para 4
+    4: se T faça vá_para 6 senão vá_para 5
+    5: faça F vá_para 1
+\end{verbatim}
+\caption{Tradução do fluxograma (b) para um programa monolítico}
+\end{figure}
+%
+\begin{figure}[H]
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7}]
+    P é R1 onde
+        R1 def (se T então R2 senão R3),
+        R2 def (G;R6),
+        R3 def (F;R4),
+        R4 def (se T então R6 senão R5),
+        R5 def (F;R1),
+        R6 def \checkmark
+\end{Verbatim}
+\caption{Tradução do fluxograma (b) para um programa recursivo}
+\end{figure}
 
-\subsection{Permission}
-You are responsible for making sure that you have the right to publish
-everything in your paper. If you use material from a copyrighted source, you
-may need to obtain permission from the copyright holder.
+\newpage
+\subsubsection{Diagrama (c)}
+~
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=7.5cm]{img/diagrama_c}
+\end{figure}
+%
+\begin{figure}[H]
+\begin{verbatim}
+    1: faça F vá_para 2
+    2: se T1 vá_para 1 senão vá_para 3
+    3: faça G vá_para 4
+    4: se T2 vá_para 5 senão vá_para 1
+\end{verbatim}
+\caption{Tradução do fluxograma (c) para um programa monolítico}
+\end{figure}
+%
+\begin{figure}[H]
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7}]
+    P é R1 onde
+        R1 def (F;R2),
+        R2 def (se T1 então R1 senão R3),
+        R3 def (G;R4),
+        R4 def (se T2 então R5 senão R1),
+        R5 def \checkmark
+\end{Verbatim}
+\caption{Tradução do fluxograma (c) para um programa recursivo}
+\end{figure}
 
-\section{CALL TO REFERENCES IN THE BODY OF TEXT}
-References should be cited in the text by name last (year) or (last name,
-year). For example: ``In a recent work, Jones et al. (2005) proposed ...,'' or
-``In a recent work (Devlou \& Zaparolli, 2013), it is suggested ... .''
+\newpage
+\subsubsection{Diagrama (d)}
+~
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=7.5cm]{img/diagrama_d}
+\end{figure}
+%
+\begin{figure}[H]
+\begin{verbatim}
+    1: se T vá_para 2 senão vá_para 4
+    2: faça F vá_para 3
+    3: se T vá_para 1 senão vá_para 4
+\end{verbatim}
+\caption{Tradução do fluxograma (d) para um programa monolítico}
+\end{figure}
+%
+\begin{figure}[H]
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7}]
+    P é R1 onde
+        R1 def (se T então R2 senão R4)
+        R2 def (F;R3)
+        R3 def (se T então R1 senão R4)
+        R4 def \checkmark
+\end{Verbatim}
+\caption{Tradução do fluxograma (d) para um programa recursivo}
+\end{figure}
 
-References must be listed in alphabetical order at the end of the paper. Type
-the word \textbf{REFERENCES} in all capitals, boldface type from the left
-margin, skip one line and type the reference list. In each reference, indent
-all lines 0.75 cm except the first line, which starts directly at the left
-margin. Each reference must be cited in the text. In the section REFERENCES is
-presented an example of a reference list including a journal article, a report,
-an edited book, proceedings, a dissertation and a book.
+\subsection{Implementação de uma Máquina Norma}
+<INSERIR TEXTO SOBRE MÁQUINA NORMA>
 
-\section{CONCLUSIONS}
-This section should be included and need to show the main contributions of the
-paper in a briefly form.
+\subsection{Implementação de uma Máquina de Turing}
+A implementação da máquina de Turing (MT) foi realizada através da linguagem de
+programação \textit{Python}, pois sua orientação a objetos e simplicidade de
+sintaxe permitiu uma modelagem do problema de forma mais direta, rápida e
+eficiente.
 
-\subsection*{\textit{Acknowledgements}}
-This section should be positioned between the end of the text and the reference
-list. Type \textbf{\textit{Acknowledgements}} in boldface italics, skip one
-line of space and type the text in regular type.
+A mesma consiste de duas classes: uma para a lógica do programa
+(\verb|TuringMachine|), e a outra para a fita (\verb|Tape|).
 
+Na classe \verb|TuringMachine|, as quíntuplas da MT, são armazenadas em um
+dicionário, onde cada elemento do dicionário corresponde a um estado, cada
+estado é um dicionário que contém os símbolos de entrada, e cada símbolo de
+entrada é um dicionário que contém a própria quíntupla, isto é, estado atual
+(\verb|present_state|), símbolo de entrada (\verb|present_symbol|), símbolo de
+saída (\verb|symbol_printed|), direção (\verb|direction|) e o próximo estado
+(\verb|next_state|).
+
+<INSERIR FIGURA - LÓGICA DE FUNCIONAMENTO DA MÁQUINA DE TURING>
+
+A essência do funcionamento da MT é apresentada na figura acima, onde, para um
+dado estado, dependendo do símbolo de \textit{input}, pode-se ter diferentes
+símbolos de \textit{output}, direções e próximos estados.
+
+Na classe \verb|Tape|, a fita é implementada como uma lista de comprimento
+flexível, grande o suficiente para armazenar os dados com algumas células em
+branco ao redor, que será preenchida com a \textit{string} de entrada.
+
+Tanto o dicionário de quíntuplas quanto os dados de entrada da fita são
+preenchidos a partir da leitura de um arquivo \verb|.yaml|, onde o usuário pode
+configurar os parâmetros da MT.
+
+Ao iniciar o programa, o mesmo realiza a inicialização de instâncias da MT e da
+fita, e exibe no console uma mensagem de confirmação: caso o usuário pressione
+\keys{\return}, a execução da MT é iniciada, caso o usuário pressione
+\keys{\ctrl+C} ou \keys{\ctrl+D}, o programa é encerrado. Partindo do
+pressuposto que o usuário decidiu iniciar a execução, o programa irá mostrar no
+console uma representação visual da fita, os dados nela presentes, e do cabeçote
+de leitura e escrita.
+
+<INSERIR FIGURA - EXECUÇÃO DA MÁQUINA DE TURING>
+
+Os seguintes elementos podem ser vistos nesta imagem:
+
+\begin{enumerate}
+    \item Iteração atual;
+    \item Ação atual do cabeçote (Leitura (\verb|R|) ou Escrita (\verb|W|));
+    \item Fita e seu conteúdo;
+    \item Posição atual do cabeçote (representado pelo par \verb|> <|).
+\end{enumerate}
+
+A cada iteração o cabeçote realiza uma etapa de leitura e uma etapa de escrita.
+Durante a leitura, o símbolo lido é comparado com os símbolos de \textit{input}
+para aquele estado. Em seguida, o símbolo de \textit{output} é escrito, a MT
+assume o novo estado, e o cabeçote se move em uma nova direção. Caso o próximo
+estado não exista, ou o símbolo de entrada não conste dentre os \textit{inputs}
+do estado atual, o programa encerrará a sua execução.
+
+Devido a impossibilidade de se determinar para quais conjuntos de entradas e
+quíntuplas a MT irá concluir sua execução ou ficará em um \textit{loop} infinito
+(Halting Problem), é possível estabelecer um número máximo de iterações para a
+MT através de um parâmetro no arquivo \verb|.yaml|. Caso o usuário deseje, este
+também pode parar a execução do programa a qualquer momento, pressionando
+\keys{\ctrl+C}.
+
+Devido aos limites físicos de um computador real em relação à MT teórica --- no
+caso, memória finita --- caso o cabeçote passe dos limites da fita, a execução
+do programa será encerrada.
+
+\subsubsection{Resultados}
+Realizou-se a configuração da MT para o reconhecimento de duas linguagens
+distintas, as quais serão apresentadas abaixo.
+
+\subsubsection{Linguagem A}
+Esta foi definida segundo a seguinte expressão regular: \verb|gggh*|.
+Isto é, a mesma gera um conjunto de palavras que começa com \verb|ggg| e então é
+seguindo de zero ou mais \verb|h|.
+
+<INSERIR FIGURA - RESULTADO POSITIVO OPERAÇÃO MÁQUINA DE TURING LINGUAGEM A>
+
+Como pode ser visto pela figura acima, a máquina aceita corretamente a entrada
+\verb|ggghhhhhhhhh|, a qual pertence à linguagem A.
+
+<INSERIR FIGURA - RESULTADO NEGATIVO OPERAÇÃO MÁQUINA DE TURING LINGUAGEM A>
+
+Já nesta outra figura, vemos que a entrada \verb|gghhhhhhhhh| não é aceita pela
+máquina, uma vez que a mesma não pertence à linguagem A.
+
+\subsubsection{Linguagem B}
+Esta foi definida segundo a seguinte expressão regular:
+\verb|g*(hhh)+g|. Isto é, a mesma gera um conjunto de palavras que começa com
+zero ou mais \verb|g|, o qual é necessariamente seguido por uma ou mais triplas
+\verb|hhh| e termina com um único \verb|g|.
+
+<INSERIR FIGURA - RESULTADO POSITIVO OPERAÇÃO MÁQUINA DE TURING LINGUAGEM B>
+
+Como pode ser visto pela figura acima, a máquina aceita corretamente a entrada
+\verb|ggggghhhhhhg|, a qual pertence à linguagem B.
+
+<INSERIR FIGURA - RESULTADO NEGATIVO OPERAÇÃO MÁQUINA DE TURING LINGUAGEM B>
+
+Já nesta outra figura, vemos que a entrada \verb|ghhhhhg| não é aceita pela
+máquina, uma vez que a mesma não pertence à linguagem B.
+
+\subsection{Uso das Máquinas de Turing}
+Devido a presença de uma CPU, instruções programadas, um fluxo de entrada e de
+saída de dados, essencialmente todos os dispositivos eletrônicos modernos podem
+ser considerados máquinas de Turing. Isto inclui celulares, computadores,
+tablets, consoles de vídeo-game e outros aparelhos conhecidos; mas também inclui
+alguns dispositivos inesperados, como televisões, lâmpadas inteligentes, robôs
+aspiradores, carros, cartões de crédito, escovas de dentes inteligentes, dentre
+muitos outros. Em um mundo cada vez mais conectado, com a expansão da Internet
+das Coisas (IoT) e da Nuvem, cada vez mais dispositivos irão contar com algum
+poder computacional e portanto poderão ser considerados máquinas de Turing.
+
+Existe, porém, uma tecnicalidade que é importante mencionar: as máquinas de
+Turing são um conceito teórico. Devido a sua capacidade de memória infinita, não
+é possível construir uma na realidade. Apesar disso, os computadores atuais são
+o modelo mais próximo da mesma, exceto pela quantidade de memória finita. O que
+isso significa na prática? Há certos problemas que não são computáveis em
+computadores atuais devido a limitações de memória, mas que poderiam ser
+resolvidas em uma máquina de Turing, dado tempo o suficiente. A classe de
+problemas solucionáveis por computadores, porém, aumenta conforme os avanços
+tecnológicos permitem \textit{hardware} cada vez mais potente e maior capacidade
+de memória.
+
+\newpage
+\section{CONCLUSÕES}
+Neste trabalho foi possível aprender a teoria e funcionamento por trás de
+máquinas de Turing e máquinas Norma, ambas pertencentes a classe de máquinas
+universais, e portanto, equivalentes em poder computacional. O uso destas para o
+processamento de dados é indispensável nos dias atuais, e, com o avanço
+tecnológico, cada vez mais aparelhos e objetos terão algum poder de
+processamento, como é o caso da Internet das Coisas (IoT). Isso significa que a
+computabilidade e suas teorias e aplicações estão sempre presentes em nosso
+entorno, e passarão a contar com um papel cada vez mais fundamental em nossas
+vidas.
 
 % ------------------------------------------------------------------------
 \begin{thebibliography}{99}
 \fontsize{11}{0}\selectfont
-\bibitem[Aznar \& Pessoa, 1994]{Aznar94}
-Aznar, M., Pessoa, F.L.P. and Silva Telles, A. (1994), ``Vapor-Liquid
-Equilibria of Mixed Solvent-Salt Systems using a MHV2 Model with the Wilson
-Equation'', {\em X Congresso Brasileiro de Engenharia Química}, São Paulo, vol
-1, 38-43.
-
-\bibitem[Freitas et~al., 2008]{Freitas08}
-de Freitas, G.C.S.; Peixoto, F.C.; Vianna Jr, A.S. (2008), Simulation of a
-thermal battery using Phoenics. Journal of Power Sources, 179, 424-429.
-
-\bibitem[Duarte, 1999]{Duarte99}
-Duarte, C.S.A. (1999), {\em Equilíbrio Líquido-Líquido em Sistemas contendo
-Polímero e Eletrólito: Água/ Polietileno-glicol/Fosfato}, Laboratório de
-Equilíbrio de Fases, FEQ/UNICAMP, Campinas.
-
-\bibitem[Fredenslund, 1993]{Fredenslund93}
-Fredenslund A. e Sorensen, J.M. (1993), ``Group Contribution Estimation
-Methods'', in {\em  Models for Thermodynamic and Phase Equilibria
-Calculations}, S.I. Sandler (ed.), Marcel Dekker, Inc., New York.
-
-\bibitem[Silva, 2005]{Silva2005}
-Silva, L.F. (2005), ``{\em Predição de Pontos Críticos de Misturas
-Termodinâmicas}'', Tese de Doutorado, IPRJ/UERJ, Nova Friburgo.
-
-\bibitem[Krevelenm, 1990]{Krevelen90}
-Van Krevelen, D.W. (1990),{\em ``Properties of Polymers. Their Correlation with
-Chemical Structure, Their Numerical Estimation and Prediction from Additive
-Group Contribuition}'', 3º ed., Elsevier, Amsterdam.
+\bibitem[Devirio, 2011]{Diverio11}
+Diverio, T. A., Menezes, P. B. (2011). Teoria da Computação: Máquinas Universais
+e Computabilidade - Vol.5. Brazil: Bookman.
 \end{thebibliography}
 \vspace*{-0.1cm}
 \section*{APPENDIX A}
-This section, if necessary, must be included here.
-
-\vspace{0.5cm} % Example spaces
-
-For Papers written in Portuguese or Spanish a translation of title, abstract
-and keywords into English must be provided after the Appendix using the same
-format for title, abstract and keywords presented in the first page of the
-template.
 % ------------------------------------------------------------------------
 
 %For papers written in Portuguese or Spanish.
 
-%\begin{center}
-%  TITLE IN ENGLISH
-%\end{center}
+\begin{center}
+  Computability --- First Assignment
+\end{center}
 
-%\def\abstractname{Abstract}%
+\def\abstractname{Abstract}%
 
-%\begin{abstract}
-%   Abstract in english
-%\end{abstract}
+\begin{abstract}
+   This assignment discusses about the definition of monolithic, iterative and
+   recursive programs; it also touches on the implementation of Norma and
+   Turing Machines.
+\end{abstract}
 
-%\keywords{\em{Keywords in english}}
+\keywords{\em{
+    Monolithic Program, Iterative Program, Recursive Program,
+    Norma Machine, Turing Machine
+}}
 
 \end{document}
